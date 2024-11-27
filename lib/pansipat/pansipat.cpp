@@ -12,19 +12,27 @@ bool Pansipat::magsipatAdresI2C(byte adres) {
 // Pansipat ng mga aparatong I2C
 void Pansipat::magsipatI2C() {
   Wire.begin();
-  Serial.println("Sinisipat ang mga aparatong I2C...");
+  Serial.println("Sinisipat ang mga aparatong I2C...\n");
   int natagpuangAparato = 0;
+
   for (byte adres = 1; adres < 127; adres++) {
     if (magsipatAdresI2C(adres)) {
-      Serial.print("Natagpuang aparato sa 0x");
+      if (natagpuangAparato == 0) {
+        Serial.println("Natagpuang Adres I2C:\n============");
+      }
+      Serial.print("    "); // Indentation na 4 spaces
+      Serial.print("0x");
+      if (adres < 16) {
+        Serial.print("0"); // Para sa mga address na mas mababa sa 0x10
+      }
       Serial.println(adres, HEX);
       natagpuangAparato++;
     }
   }
   if (natagpuangAparato == 0) {
-    Serial.println("Walang natagpuan");
+    Serial.println("    Walang natagpuan\n");
   } else {
-    Serial.println("Natapos ang pagsipat");
+    Serial.println("============\n");
   }
 }
 
