@@ -37,9 +37,21 @@ MIT License
 ``` md
 Karapatang-ari 2025 LAKAN HARAYA
 
-Pinapayagan dito, nang walang bayad, ang sinumang makakuha ng kopya ng software na ito at mga kaugnay na dokumentasyong file (ang “Software”), na gumamit, kopyahin, baguhin, pagsamahin, ipamahagi, ipamahagi sa iba, at/o ibenta ang mga kopya ng Software, at pahintulutan ang mga tao na tumanggap ng Software na gawin ito, alinsunod sa mga sumusunod na kondisyon:
+Pinapayagan dito, nang walang bayad, ang sinumang makakuha ng kopya
+ng software na ito at mga kaugnay na dokumentasyong file (ang
+“Software”), na gumamit, kopyahin, baguhin, pagsamahin, ipamahagi,
+ipamahagi sa iba, at/o ibenta ang mga kopya ng Software, at
+pahintulutan ang mga tao na tumanggap ng Software na gawin ito,
+alinsunod sa mga sumusunod na kondisyon:
 
-Ang paunawa ng karapatang-ari at ang pahintulot sa itaas ay kasama sa lahat ng mga kopya o mahahalagang bahagi ng Software.
+Ang paunawa ng karapatang-ari at ang pahintulot sa itaas ay kasama
+sa lahat ng mga kopya o mahahalagang bahagi ng Software.
 
-IBINIBIGAY ANG SOFTWARE “AS IS”, WALANG ANUMANG GARANTIYA NG ANUMANG URI, HAYAG O IPINAHIWATIG, KASAMA NA ANG, NGUNIT HINDI LIMITADO SA MGA GARANTIYA NG KALAKAL, PAG-AANGKOP PARA SA ISANG PARTIKULAR NA LAYUNIN, AT PAGLABAG SA KARAPATAN. HINDI MANANAGOT ANG MGA MAY-AKDA O MAYHAWAK NG KARAPATANG-ARI PARA SA ANUMANG PAGHAHABOL, PAGKAKASIRA, O IBA PANG PANANAGUTAN, KAHIT SA ISANG AKSIYON NG KONTRATA, TORT O IBA PA, NA NAGMUMULA, O KONEKTADO SA SOFTWARE O PAGGAMIT O IBA PANG PAGGAMIT SA SOFTWARE.
-```
+IBINIBIGAY ANG SOFTWARE “AS IS”, WALANG ANUMANG GARANTIYA NG
+ANUMANG URI, HAYAG O IPINAHIWATIG, KASAMA NA ANG, NGUNIT HINDI
+LIMITADO SA MGA GARANTIYA NG KALAKAL, PAG-AANGKOP PARA SA ISANG
+PARTIKULAR NA LAYUNIN, AT PAGLABAG SA KARAPATAN. HINDI MANANAGOT
+ANG MGA MAY-AKDA O MAYHAWAK NG KARAPATANG-ARI PARA SA ANUMANG
+PAGHAHABOL, PAGKAKASIRA, O IBA PANG PANANAGUTAN, KAHIT SA ISANG
+AKSIYON NG KONTRATA, TORT O IBA PA, NA NAGMUMULA, O KONEKTADO SA
+SOFTWARE O PAGGAMIT O IBA PANG PAGGAMIT SA SOFTWARE.
