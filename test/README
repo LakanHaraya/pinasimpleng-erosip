@@ -9,15 +9,3 @@ in the development cycle.
 
 More information about PlatformIO Unit Testing:
 - https://docs.platformio.org/en/latest/advanced/unit-testing/index.html
-
-
-your-project/
-│
-├── src/
-│   └── main.cpp  (dito ilalagay ang code template mo)
-│
-├── include/      (optional, para sa mga header files kung kailangan)
-│
-├── lib/          (optional, para sa mga external libraries kung kailangan)
-│
-└── platformio.ini (configuration file para sa PlatformIO)
