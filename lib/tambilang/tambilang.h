@@ -6,10 +6,13 @@
 class Tambilang {
 public:
     Tambilang(int pin);
-    void simulan();
+    void papasokHatak();
+    void papasok();
+    void palabas();
     void isulat(bool halaga);
     void itaas();
     void ibaba();
+    bool basahin();
 private:
     int numeroPin;
 };

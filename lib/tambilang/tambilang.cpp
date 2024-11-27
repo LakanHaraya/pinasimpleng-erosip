@@ -6,8 +6,18 @@ Tambilang::Tambilang(int pin) {
     numeroPin = pin;
 }
 
-// Funsiyon para itakda ang pin nilang OUTPUT
-void Tambilang::simulan() {
+// Funsiyon para itakda ang pin bilang INPUT_PULLUP
+void Tambilang::papasokHatak() {
+    pinMode(numeroPin, INPUT_PULLUP);
+}
+
+// Funsiyon para itakda ang pin bilang INPUT
+void Tambilang::papasok() {
+    pinMode(numeroPin, INPUT);
+}
+
+// Funsiyon para itakda ang pin bilang OUTPUT
+void Tambilang::palabas() {
     pinMode(numeroPin, OUTPUT);
 }
 
@@ -24,4 +34,9 @@ void Tambilang::itaas() {
 // Funsiyon para pababain ang pin (itakda sa LOW)
 void Tambilang::ibaba() {
     digitalWrite(numeroPin, LOW);
+}
+
+// Funsiyon para basahin ang kasalukuyang estado ng pin (HIGH o LOW)
+bool Tambilang::basahin() {
+    return digitalRead(numeroPin) == LOW;
 }
