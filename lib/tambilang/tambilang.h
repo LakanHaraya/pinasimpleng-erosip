@@ -5,7 +5,7 @@
 
 class Tambilang {
 public:
-    Tambilang(int pin);
+    Tambilang(int pin, bool aktibongMababa = true);
     void papasokHatak();
     void papasok();
     void palabas();
@@ -14,7 +14,8 @@ public:
     void ibaba();
     bool basahin();
 private:
-    int numeroPin;
+    int _pin;
+    bool _aktibongMababa;
 };
 
 #endif

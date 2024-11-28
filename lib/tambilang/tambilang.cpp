@@ -2,41 +2,49 @@
 #include "tambilang.h"
 
 // Konstruktor para itakda ang numero ng pin
-Tambilang::Tambilang(int pin) {
-    numeroPin = pin;
-}
+Tambilang::Tambilang(int pin, bool aktibongMababa) : _pin(pin), _aktibongMababa(aktibongMababa) {}
 
-// Funsiyon para itakda ang pin bilang INPUT_PULLUP
+/*
+    Itakda ang pin bilang `INPUT_PULLUP`. Sa ganitong pagsasaayos,
+    ang aktibong estado (triggering) ay `LOW`.
+*/
 void Tambilang::papasokHatak() {
-    pinMode(numeroPin, INPUT_PULLUP);
+    pinMode(_pin, INPUT_PULLUP);
 }
 
 // Funsiyon para itakda ang pin bilang INPUT
 void Tambilang::papasok() {
-    pinMode(numeroPin, INPUT);
+    pinMode(_pin, INPUT);
 }
 
 // Funsiyon para itakda ang pin bilang OUTPUT
 void Tambilang::palabas() {
-    pinMode(numeroPin, OUTPUT);
+    pinMode(_pin, OUTPUT);
 }
 
-// Funsiyon para magtakda ng halaga sa pin (HIGH o LOW)
+/*
+    Itakda ang estado ng pin. Kapag ang `aktibongMababa` ay `true`,
+    kumakatawan ang `LOW` sa "on/true" at ang `HIGH` sa "off/false".
+    Kapag `false`, ang `HIGH` ay "on" at `LOW` ay "off".
+*/
 void Tambilang::isulat(bool halaga) {
-    digitalWrite(numeroPin, halaga ? HIGH : LOW);
+    //// digitalWrite(_pin, halaga ? LOW : HIGH);
+    digitalWrite(_pin, _aktibongMababa ? !halaga : halaga);
 }
 
 // Funsiyon para pataasin ang pin (itakda sa HIGH)
 void Tambilang::itaas() {
-    digitalWrite(numeroPin, HIGH);
+    digitalWrite(_pin, HIGH);
 }
 
 // Funsiyon para pababain ang pin (itakda sa LOW)
 void Tambilang::ibaba() {
-    digitalWrite(numeroPin, LOW);
+    digitalWrite(_pin, LOW);
 }
 
 // Funsiyon para basahin ang kasalukuyang estado ng pin (HIGH o LOW)
 bool Tambilang::basahin() {
-    return digitalRead(numeroPin) == LOW;
+    //// return digitalRead(_pin) == HIGH;
+    bool halagangHilaw = digitalRead(_pin) == HIGH;
+    return _aktibongMababa ? !halagangHilaw : halagangHilaw;    // Isaayos ang halaga batay sa asal ng aktibong-mababa
 }
