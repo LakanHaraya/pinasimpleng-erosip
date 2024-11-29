@@ -1,7 +1,6 @@
 /*
   Isang joystik at apat na servo motor sa PCA9685
   May deteksiyon ng pagkatamlay at limitasyon ng pagkilos ng servo
-  Magpi-print lang ng pagbabago sa mga input o "Joystick Idle..." isang beses lang
 */
 
 #include <Arduino.h>
@@ -47,9 +46,6 @@ const int ELEVATOR_MAX_ANGLE = 160;
 // Timing variables
 const unsigned long UPDATE_INTERVAL = 10; // Update every 10ms
 unsigned long lastUpdateTime = 0;
-
-// Idle flag
-bool idlePrinted = false;
 
 void setup() {
   Serial.begin(115200);
@@ -114,22 +110,15 @@ void loop() {
       pwm.setPWM(ELEVATOR1, 0, elevatorPulse);
       pwm.setPWM(ELEVATOR2, 0, elevatorPulse);
 
-      // Print debug info for changes
+      // Optional: Print debug info
       Serial.print("Rudder Pulse: ");
       Serial.print(rudderPulse);
-      Serial.print("\t");
       Serial.print(" Elevator Pulse: ");
       Serial.println(elevatorPulse);
 
-      // Reset idle flag
-      idlePrinted = false;
-
     } else {
-      // Print "Idle" status only once when no significant change
-      if (!idlePrinted) {
-        Serial.println("Joystick Idle...");
-        idlePrinted = true;  // Set flag to avoid repeated printing
-      }
+      // Print "Idle" status if no significant change in joystick
+      Serial.println("Joystick Idle...");
     }
 
     // Update last known positions
