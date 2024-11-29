@@ -1,3 +1,7 @@
+/*
+  Halimbawa ng modular na paraan sa pagkontrol ng mga palikpik
+*/
+
 #include <Arduino.h>
 #include "pamalikpik.h"
 
